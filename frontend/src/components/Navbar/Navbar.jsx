@@ -11,7 +11,9 @@ const Navbar = ({ setShowLogin }) => {
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
   const logout = () => {
-    console.log("TOKEN FROM API:", response.data.token);
+    console.log("hello logot");
+    //  console.log("TOKEN FROM API:", response);
+    
 
     localStorage.removeItem("token");
     setToken("");
@@ -38,9 +40,9 @@ const Navbar = ({ setShowLogin }) => {
 
 
 
-        {!token?
+         {!token? 
           <button onClick={()=> setShowLogin(true)}>Sign in</button>
-          : <div className='navbar-profile'>
+           :<div className='navbar-profile'>
             <img src={assets.profile_icon} alt="" />
             <ul className="nav-profile-dropdown">
               <li>
@@ -54,7 +56,7 @@ const Navbar = ({ setShowLogin }) => {
               </li>
             </ul>
           </div>
-        }
+}
 
 
       </div>
